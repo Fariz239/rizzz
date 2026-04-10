@@ -542,3 +542,117 @@ body.dark-mode #berita {
 #navbar.navbar-scroll .navbar-container {
     padding: 10px 24px;
 }
+
+@media (max-width: 1023px) {
+
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 kolom -> 2 kolom */
+  }
+
+  .hero__title {
+    font-size: 2.4rem;
+  }
+}
+
+/* ── MOBILE (max 767px) ─────────────────────── */
+@media (max-width: 767px) {
+
+  /* Navbar: sembunyikan menu, tampilkan hamburger (sederhana) */
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar__links {
+    display: none; /* sembunyikan menu di mobile */
+  }
+
+  /* Hero: font lebih kecil */
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__desc {
+    font-size: 1rem;
+  }
+
+  /* Skills: 1 kolom di mobile */
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Container: padding lebih kecil */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Skills section: padding lebih kecil */
+  .skills {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* =============================================
+   TAMPILAN MOBILE (HP) - RESPONSIVE DESIGN
+   ============================================= */
+@media (max-width: 768px) {
+    /* 1. Navbar: Menyusun logo, menu, dan tombol ke bawah */
+    .navbar-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+    
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* 2. Hero Section: Mengecilkan ukuran huruf judul */
+    .hero-judul {
+        font-size: 32px;
+    }
+    
+    .hero-sub {
+        font-size: 15px;
+    }
+
+    .hero-tombol-grup {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* 3. Program Studi & Berita: Mengubah 3 kolom jadi 1 kolom */
+    .program-grid, 
+    .berita-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 4. Sambutan Rektor: Foto di atas, teks di bawah */
+    .sambutan-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+
+    .foto-rektor {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* 5. Footer: Mengubah 4 kolom jadi 1 kolom menyusun ke bawah */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+        padding: 40px 24px;
+    }
+    
+    .footer-logo {
+        margin: 0 auto 16px auto; /* Memastikan logo footer di tengah */
+    }
+}
